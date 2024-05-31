@@ -149,7 +149,7 @@ conditional_TE <- compute_entropy(as.data.frame(cbind(x[2:length(x)], x[1:length
 
 
 ################################ REAL DATA ################################ 
-setwd("/Users/ronibarakventura/Desktop")
+setwd(dirname(rstudioapi::getSourceEditorContext()$path))
 nature <- read_csv("nature.csv")
 nature$time <- time(ts(nature$Background_checks, start=c(1999, 1), end=c(2017, 12), frequency=12))
 
